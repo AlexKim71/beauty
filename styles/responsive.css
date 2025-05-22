@@ -1,0 +1,70 @@
+/* Эффекты :hover и :focus только на устройствах с мышкой */
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: #f3366c;
+    color: white;
+  }
+
+  button:focus-visible {
+    outline: 2px dashed #f3366c;
+    outline-offset: 4px;
+  }
+
+  /* Если используешь :focus — тоже внутрь */
+  button:focus {
+    outline: 2px solid #f3366c;
+    outline-offset: 2px;
+  }
+}
+
+/*средные декстопы*/
+@media (max-width: 1199px) {
+  /* .offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  } */
+   .footer-extra .container {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+   }
+  .bonuses-part {
+    row-gap: 30px;
+    margin: 0 auto;
+  }
+  .bonus-card, .visit-us {
+    display: flex;
+    flex-direction: column;
+  }
+  .bonus-card > div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/*планшеты*/
+@media (max-width: 991px) {
+    .contact-bar .container {
+      display: flex;
+      flex-direction: column;
+      padding-block: 20px;
+    }
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      
+    }
+}
+
+/*большие мобильные*/
+@media (max-width: 767px) {
+  
+}
+
+/*малые мобильные*/
+@media (max-width: 575px) {
+   .offers-grid {
+    display: grid !important;
+    /* grid-template-columns: repeat(1, 1fr) !important; */
+  }
+}

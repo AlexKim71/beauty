@@ -1,0 +1,106 @@
+.special-offers {
+  background-color: var(--snow);
+	padding-top: 80px;
+	padding-bottom: 100px;
+	min-height: 151px;
+}
+.special-offers .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.offers-part {
+  margin-bottom: 101px;
+}
+
+.offers-part h2 {
+  margin-bottom: 38px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto)); 
+  gap: clamp(0.625rem, 0.296rem + 1.32vw, 1.875rem);
+}
+
+.offer-item {
+  background: var(--white);
+  padding-block: 25px;
+	padding-inline: 40px;
+	width: fit-content;
+	height: 363px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.offer-item .description {
+	text-align: center;
+	max-width: 193px;
+}
+.price {
+	font-size: 21px;
+	font-weight: 700;
+	margin-block: 20px;
+}
+.offer-item > img {
+	width: 125px;
+  height: 166px;
+  object-fit: contain;
+  max-height: 200px; /* ограничение по высоте */
+  display: block;
+}
+
+.bonuses-part {
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(540px, auto)); 
+	column-gap: 40px;
+}
+
+
+.bonuses-part h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.bonus-card, .visit-us {
+  background: var(--primary-pink);
+	display: flex;
+	column-gap: 65px;
+	align-items: center;
+	padding: 35px 40px;
+	max-width: 540px;
+}
+
+.bonus-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+
+.visit-us-content > .description, 
+.bonus-card-content > .description{
+	color: var(--white);
+	display: flex;
+}
+.visit-us-content > h3, 
+.bonus-card-content > h3 { 
+	color: var(--white);
+	font-size: 18px;
+}
+
+.bonus-card-content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+
+.visit-us-content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+

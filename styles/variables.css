@@ -1,0 +1,37 @@
+ 
+  
+:root {
+		/* Basic Colors */
+    --primary-pink: #F13C6E;
+		--black: #000000;
+		--white: #FFFFFF;
+		--flame: #EF5533;
+		--silver: #C4C4C4;
+		--charcoal: #333333;
+		--slate: #828282;
+		--snow: #EFEFEF;
+
+		/* Basic Fonts*/
+		--font-family-base: 'Roboto', sans-serif;
+    --font-family-accent: 'Inter', sans-serif;
+  
+		/* animation */
+		--transition-duration: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+
+		/* container */
+		--container-width: 1110px;
+		--container-offset: 15px;
+		--gap: 30px;
+
+		/* borders */
+		--border-radius: 40px;
+    --border-primary-pink: 2px solid var(--primary-pink);
+		--border-white: 2px solid var(--white);
+
+		/* input */
+		--input-height: 35px;
+
+		/* outline for accesability  */ 
+		--outline: 2px dashed currentColor;
+		--outline-offset: 3px;
+}

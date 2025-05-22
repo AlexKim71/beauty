@@ -1,0 +1,26 @@
+.impuls-grid {
+  font-family: Arial, sans-serif;
+  min-height: 358px;
+  background-color: var(--snow);
+}
+.impuls-grid .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-auto-rows: 7.4375rem;
+}
+
+.impuls-item {
+  border: 1px solid var(--snow);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.impuls-item img {
+  width: 100%;
+  height: auto;
+  max-width: 120px;
+  padding: 35px 60px;
+  object-fit: contain;
+}

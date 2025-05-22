@@ -1,0 +1,91 @@
+/* верхняя шапка */
+.top-navigation {
+	background-color: var(--snow);
+}
+.top-navigation-list { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	column-gap: clamp(10px, calc(1.43vw + 2.543px), 30px);
+	background-color: var(--snow);
+	min-height: 50px;
+
+}
+.top-navigation-list > li > a:hover {
+	color: var(--black) !important; /* Цвет текста при наведении */
+  font-weight: 900 !important; /* Жирный текст при наведении */
+  text-shadow:
+    2px 2px 0 var(--black),   
+    -2px -2px 0var(--black),
+    -2px 2px 0 var(--black),
+    2px -2px 0 var(--black),
+    0 2px 0 var(--black),
+    2px 0 0 var(--black),
+    0 -2px 0 var(--black),
+    -2px 0 0 var(--black);
+  -webkit-text-stroke: 2px var(--charcoal); /* чёрный контур вокруг букв */
+	transition-duration: var(--transition-duration);
+}
+
+/* для доступности*/
+.top-navigation-list > li > a:focus {
+	outline: none;
+}
+
+/* для доступности*/
+.top-navigation-list > li > a:focus-visible {
+	outline: var(--outline);
+	outline-offset: var(--outline-offset);
+}
+
+.top-navigation-list > li > a:active {
+	color: var(--flame);
+}
+
+.top-navigation-list > li {
+	font-size: 14px !important;
+}
+/* верхняя шапка */
+
+
+/* средняя шапка */
+.logo {
+    display: flex;
+		background-color: var(--white);
+		border-bottom: 1px solid var(--snow);
+}
+	
+	.logo .container {
+		padding-block: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%; 
+}
+
+.logo picture {
+    flex-shrink: 0;
+}
+
+.contact-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: clamp(10px, calc(2.678vw - 11.38px), 40px);
+}
+/* средняя шапка */
+
+
+
+/* нижняя шапка */
+
+.bottom-navigation-list {
+    display: flex;
+		align-items: center;
+		justify-content: center;
+    column-gap: clamp(0.625rem, 0.407rem + 1.74vw, 2.5rem);
+		padding-block: 30px;
+}
+
+/* нижняя шапка */
