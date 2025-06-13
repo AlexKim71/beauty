@@ -94,32 +94,36 @@ button {
     background-color: var(--primary-pink); /* Розовый цвет */
     color: var(--white); /* Белый текст */
     padding: 9px 39px; /* Внутренние отступы */
-		border: var(--border-white);
+	border: var(--border-white);
     border-radius: var(--border-radius); /* Закругляем углы */
     font-size: 14px;
     transition: var(--transition-duration); /* Плавный переход */
-		width: 130px;
+	width: 130px;
 }
 	
 .buy-button:hover {
-	  border: var(--border-primary-pink);
+	border: var(--border-primary-pink);
     background-color: var(--white); /* Более темный розовый при наведении */
     color: var(--primary-pink);
 }
 
 .more-details-button {
-    background-color: var(--primary-pink); /* Розовый цвет */
-    color: var(--white); /* Белый текст */
-    padding: 13px 45px;
-    border: var(--border-white); /* Белая граница */
+    background-color: var(--primary-pink); 
+    color: var(--white); 
+    border: var(--border-white);  
     border-radius: var(--border-radius); /* Закругленные углы */
-    font-size: 16px; /* Размер шрифта */
-    transition: var(--transition-duration); /* Плавный переход */
+    transition: var(--transition-duration);
+	
+	max-width: 248px;
+    padding: clamp(0.5em, 1vw + 0.5em, 0.8125em) clamp(1.5em, 2vw + 1em, 2.8125em);
+	font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    display: inline-block;
+    text-align: center;
 }
 
 .more-details-button:hover {
     background-color: var(--white);
-		color: var(--primary-pink);
+	color: var(--primary-pink);
 
 }
 
@@ -132,16 +136,16 @@ button {
 .email-input {
     background-color: var(--white); /* Белый фон */
     color: var(--primary-pink); /* Розовый текст */
-    padding-block: 10px; 
-		padding-left: 26px;
-		padding-right: 105px;
+    padding-block: 1em;
+	padding-left: 1.625em;
+	padding-right: 6.5625em;
     border: none; /* Убираем границы */
     border-radius: var(--border-radius); /* Закругленные углы */
-    font-size: 16px; /* Размер шрифта */
+    font-size: 1em; /* Размер шрифта */
     box-sizing: border-box !important; /* Включаем padding и border в ширину */
     transition: var(--transition-duration); /* Плавный переход */
-		width: 100%;
-		min-height: var(--input-height);
+	width: 100%;
+	min-height: var(--input-height);
 }
 
 .email-input:focus {
@@ -179,13 +183,21 @@ input[type=number] {
 
 /* texts & titles */
 .description {
-	font-size: 14px;
+	font-size: 14px !important;
 	font-weight: 400;
 	font-weight: var(--font-family-base);
+	display: block !important;
+}
+
+.offer-item > .description {
+	color: var(--black) !important;
 }
 .medium-title {
 	font-size: 24px;
 	color: var(--black);
 	font-weight: bold;
+}
+.show {
+	display: inline;
 }
 /* texts & titles */

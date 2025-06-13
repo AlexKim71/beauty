@@ -19,26 +19,20 @@
 
 /*средные декстопы*/
 @media (max-width: 1199px) {
-  /* .offers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  } */
    .footer-extra .container {
     display: flex;
     flex-direction: column;
     text-wrap: wrap;
    }
-  .bonuses-part {
-    row-gap: 30px;
-    margin: 0 auto;
-  }
-  .bonus-card, .visit-us {
+ 
+}
+
+@media (max-width: 1050px) {
+  .visit-us,
+  .bonus-card {
     display: flex;
     flex-direction: column;
-  }
-  .bonus-card > div {
-    display: flex;
-    flex-direction: column-reverse;
+    text-align: center;
   }
 }
 
@@ -52,19 +46,92 @@
     .social-icons {
       display: flex;
       flex-direction: row;
-      
     }
 }
 
 /*большие мобильные*/
 @media (max-width: 767px) {
-  
+  .bottom-navigation,
+  .top-navigation,
+  .contact-block {
+    display: none;
+  }
+
+  .footer-copyright-second,
+  .footer-copyright-first {
+    text-align: center;
+  }
+
+   .footer-copyright-second {
+    padding-top: 30px;
+  }
+
+  .logo > .container > a > picture > img {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo > .container {
+    height: 30px;
+  }
+  .hamburger {
+		display: block;
+	}
+  .logo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .menu {
+    display: block;
+  }
 }
 
-/*малые мобильные*/
-@media (max-width: 575px) {
-   .offers-grid {
-    display: grid !important;
-    /* grid-template-columns: repeat(1, 1fr) !important; */
+@media (max-width: 630px) {
+  .bonuses-part {
+    display: flex;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+  .bonus-card,
+  .visit-us {
+    display: flex;
+    row-gap: 30px;
+  }
+  h3,.description {
+    padding: 30px;
+  }
+  .offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .offer-item {
+    width: auto;
+    padding-inline: 0;
+  }
+ 
+  .medium-title {
+    text-align: center;
+  }
+
+  .hero-heading + .description {
+	  padding: 0px;
+  }
+
+}
+
+@media (max-width: 443px) {
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 396px) {
+  .bonus-card-content > h3 {
+    padding: 0px;
   }
 }

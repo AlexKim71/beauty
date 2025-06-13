@@ -1,5 +1,5 @@
 .special-offers {
-  background-color: var(--snow);
+	background-color: var(--snow);
 	padding-top: 80px;
 	padding-bottom: 100px;
 	min-height: 151px;
@@ -10,29 +10,29 @@
 }
 
 .offers-part {
-  margin-bottom: 101px;
+	margin-bottom: 101px;
 }
 
 .offers-part h2 {
-  margin-bottom: 38px;
+	margin-bottom: 38px;
 }
 
 .offers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto)); 
-  gap: clamp(0.625rem, 0.296rem + 1.32vw, 1.875rem);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	gap: clamp(0.625rem, 0.296rem + 1.32vw, 1.875rem);
 }
 
 .offer-item {
-  background: var(--white);
-  padding-block: 25px;
+	background: var(--white);
+	padding-block: 25px;
 	padding-inline: 40px;
 	width: fit-content;
 	height: 363px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: end;
 }
 .offer-item .description {
 	text-align: center;
@@ -41,66 +41,78 @@
 .price {
 	font-size: 21px;
 	font-weight: 700;
-	margin-block: 20px;
+	padding-block: 20px;
 }
+.product-image + .description {
+	padding: 0px !important;
+	line-height: 1.1875em;
+}
+
 .offer-item > img {
-	width: 125px;
-  height: 166px;
-  object-fit: contain;
-  max-height: 200px; /* ограничение по высоте */
-  display: block;
+	width: 9.8125em;
+	height: 14.375em;
+	object-fit: cover;
+	max-height: 200px; /* ограничение по высоте */
+	display: block;
+	margin-bottom: 20px;
 }
 
 .bonuses-part {
-  display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(540px, auto)); 
-	column-gap: 40px;
-}
-
-
-.bonuses-part h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-
-.bonus-card, .visit-us {
-  background: var(--primary-pink);
 	display: flex;
-	column-gap: 65px;
+	flex-wrap: nowrap; /* Не переносить на новую строку */
+	gap: 20px; /* Расстояние между карточками */
+}
+
+.bonus-card,
+.visit-us {
+	flex: 1 1 50%; /* Карточки равномерно делят место */
+	min-width: 0; /* Позволяет сжиматься до минимальной ширины */
+	display: flex;
+	flex-direction: row; /* Содержимое карточек */
+	justify-content: space-between;
 	align-items: center;
-	padding: 35px 40px;
-	max-width: 540px;
+	padding: 20px;
+	background-color: var(--primary-pink); /* Белый фон карточек */
+	box-sizing: border-box;
+	column-gap: 65px;
 }
 
-.bonus-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #444;
-}
-
-
-.visit-us-content > .description, 
-.bonus-card-content > .description{
-	color: var(--white);
-	display: flex;
-}
-.visit-us-content > h3, 
-.bonus-card-content > h3 { 
-	color: var(--white);
-	font-size: 18px;
-}
-
-.bonus-card-content {
-	display: flex;
-	flex-direction: column;
-	row-gap: 25px;
-}
-
+.bonus-card-content,
 .visit-us-content {
-	display: flex;
-	flex-direction: column;
-	row-gap: 25px;
+	flex: 1 1 auto;
+	min-width: 0;
 }
 
+h3 {
+	font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+	text-wrap: nowrap;
+	padding-bottom: 1.2625em;
+}
+h3,
+.description {
+	color: var(--white) !important;
+}
+
+.description {
+	font-size: clamp(0.813rem, 0.738rem + 0.38vw, 1.188rem) !important;
+	padding-bottom: 1.5625em;
+}
+
+.bonus-card img {
+	max-width: 140px;
+	max-height: 140px;
+	flex-shrink: 0; /* Картинка не сжимается */
+}
+
+.visit-us img {
+	max-width: 188px;
+	max-height: 100px;
+	flex-shrink: 0;
+}
+
+.bonus-card img,
+.visit-us img {
+	flex-shrink: 0; /* Картинка не сжимается */
+	width: auto;
+	height: auto;
+}
