@@ -1,0 +1,118 @@
+.special-offers {
+	background-color: var(--snow);
+	padding-top: 80px;
+	padding-bottom: 100px;
+	min-height: 151px;
+}
+.special-offers .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.offers-part {
+	margin-bottom: 101px;
+}
+
+.offers-part h2 {
+	margin-bottom: 38px;
+}
+
+.offers-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	gap: clamp(0.625rem, 0.296rem + 1.32vw, 1.875rem);
+}
+
+.offer-item {
+	background: var(--white);
+	padding-block: 25px;
+	padding-inline: 40px;
+	width: fit-content;
+	height: 363px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+}
+.offer-item .description {
+	text-align: center;
+	max-width: 193px;
+}
+.price {
+	font-size: 21px;
+	font-weight: 700;
+	padding-block: 20px;
+}
+.product-image + .description {
+	padding: 0px !important;
+	line-height: 1.1875em;
+}
+
+.offer-item > img {
+	width: 9.8125em;
+	height: 14.375em;
+	object-fit: cover;
+	max-height: 200px; /* ограничение по высоте */
+	display: block;
+	margin-bottom: 20px;
+}
+
+.bonuses-part {
+	display: flex;
+	flex-wrap: nowrap; /* Не переносить на новую строку */
+	gap: 20px; /* Расстояние между карточками */
+}
+
+.bonus-card,
+.visit-us {
+	flex: 1 1 50%; /* Карточки равномерно делят место */
+	min-width: 0; /* Позволяет сжиматься до минимальной ширины */
+	display: flex;
+	flex-direction: row; /* Содержимое карточек */
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: var(--primary-pink); /* Белый фон карточек */
+	box-sizing: border-box;
+	column-gap: 65px;
+}
+
+.bonus-card-content,
+.visit-us-content {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+h3 {
+	font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+	text-wrap: nowrap;
+	padding-bottom: 1.2625em;
+}
+h3,
+.description {
+	color: var(--white) !important;
+}
+
+.description {
+	font-size: clamp(0.813rem, 0.738rem + 0.38vw, 1.188rem) !important;
+	padding-bottom: 1.5625em;
+}
+
+.bonus-card img {
+	max-width: 140px;
+	max-height: 140px;
+	flex-shrink: 0; /* Картинка не сжимается */
+}
+
+.visit-us img {
+	max-width: 188px;
+	max-height: 100px;
+	flex-shrink: 0;
+}
+
+.bonus-card img,
+.visit-us img {
+	flex-shrink: 0; /* Картинка не сжимается */
+	width: auto;
+	height: auto;
+}

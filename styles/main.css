@@ -1,0 +1,203 @@
+body {
+	font-family: var(--font-family-base);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.75;
+	color: var(--black);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+	transition-duration: var(--transition-duration);
+	cursor: pointer;
+}
+
+a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--flame);
+}
+
+[href="tel:+78121234567"] {
+	font-size: 18px;
+}
+p {
+	margin-block: 0;
+}
+p:not([class]):not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	/* text-transform: uppercase; */
+	color: var(--black);
+	margin: 0px;
+}
+
+/* styles for buttons */
+button {
+	padding: 10px 24px;
+	font-size: 14px;
+	border-radius: var(--border-radius);
+	font-weight: 200;
+	text-align: center;
+	letter-spacing: 2.3px;
+	text-wrap: nowrap;
+}
+
+.callback-btn {
+	padding: 12px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  background-color: transparent;
+  border: var(--border-primary-pink);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(243, 54, 108, 0.2);
+	transition: var(--transition-duration);
+}
+
+.callback-btn:hover,
+.callback-btn:focus {
+	background-color: var(--primary-pink);
+  color: var(--white);
+  outline: none;
+}
+
+.buy-button {
+    background-color: var(--primary-pink); /* Розовый цвет */
+    color: var(--white); /* Белый текст */
+    padding: 9px 39px; /* Внутренние отступы */
+	border: var(--border-white);
+    border-radius: var(--border-radius); /* Закругляем углы */
+    font-size: 14px;
+    transition: var(--transition-duration); /* Плавный переход */
+	width: 130px;
+}
+	
+.buy-button:hover {
+	border: var(--border-primary-pink);
+    background-color: var(--white); /* Более темный розовый при наведении */
+    color: var(--primary-pink);
+}
+
+.more-details-button {
+    background-color: var(--primary-pink); 
+    color: var(--white); 
+    border: var(--border-white);  
+    border-radius: var(--border-radius); /* Закругленные углы */
+    transition: var(--transition-duration);
+	
+	max-width: 248px;
+    padding: clamp(0.5em, 1vw + 0.5em, 0.8125em) clamp(1.5em, 2vw + 1em, 2.8125em);
+	font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    display: inline-block;
+    text-align: center;
+}
+
+.more-details-button:hover {
+    background-color: var(--white);
+	color: var(--primary-pink);
+
+}
+
+/* styles for buttons */
+
+
+
+/* input styles */
+
+.email-input {
+    background-color: var(--white); /* Белый фон */
+    color: var(--primary-pink); /* Розовый текст */
+    padding-block: 1em;
+	padding-left: 1.625em;
+	padding-right: 6.5625em;
+    border: none; /* Убираем границы */
+    border-radius: var(--border-radius); /* Закругленные углы */
+    font-size: 1em; /* Размер шрифта */
+    box-sizing: border-box !important; /* Включаем padding и border в ширину */
+    transition: var(--transition-duration); /* Плавный переход */
+	width: 100%;
+	min-height: var(--input-height);
+}
+
+.email-input:focus {
+    outline: none; /* Убираем стандартную обводку при фокусе */
+     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.email-input::placeholder {
+    color: var(--silver); /* Розовый цвет плейсхолдера */
+    opacity: 1; /* Непрозрачный цвет плейсхолдера */
+		font-size: 16px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* input styles */
+
+
+.container {
+	margin-inline: auto !important;
+	max-width: calc(var(--container-width) + var(--container-offset) * 2);
+	padding-inline: var(--container-offset);
+}
+
+
+/* texts & titles */
+.description {
+	font-size: 14px !important;
+	font-weight: 400;
+	font-weight: var(--font-family-base);
+	display: block !important;
+}
+
+.offer-item > .description {
+	color: var(--black) !important;
+}
+.medium-title {
+	font-size: 24px;
+	color: var(--black);
+	font-weight: bold;
+}
+.show {
+	display: inline;
+}
+/* texts & titles */

@@ -1,0 +1,9 @@
+.recently-viewed {
+	background: var(--snow);
+	min-height: 400px;
+	padding-block: 80px;
+}
+
+.recently-viewed-heading {
+	padding-bottom: 40px;
+}
